@@ -2,7 +2,7 @@
 
 A modern web platform designed to help creative writers organize, develop, and share their writing projects. Built with cutting-edge web technologies for an intuitive and feature-rich user experience.
 
-**[Project Report](https://github.com/SulavBaskota/mini-project/raw/main/Project%20Report.pdf)**
+**[🔗 Project Report](https://github.com/SulavBaskota/mini-project/raw/main/Project%20Report.pdf)**
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ A modern web platform designed to help creative writers organize, develop, and s
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation))
+  - [Installation](#installation)
 - [Available Scripts](#available-scripts)
 - [Key Technologies](#key-technologies)
 
