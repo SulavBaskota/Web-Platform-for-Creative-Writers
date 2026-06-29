@@ -4,6 +4,17 @@ A modern web platform designed to help creative writers organize, develop, and s
 
 **[Project Report](https://github.com/SulavBaskota/mini-project/raw/main/Project%20Report.pdf)**
 
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation))
+- [Available Scripts](#available-scripts)
+- [Key Technologies](#key-technologies)
+
 ## Features
 
 - 📝 **Project Management** - Create and organize multiple writing projects
@@ -34,6 +45,21 @@ A modern web platform designed to help creative writers organize, develop, and s
 ### Additional Services
 - **Cloudinary** - Cloud image management and CDN
 - **Nodemailer** - Email sending functionality
+
+## Project Structure
+```
+├── components/          # Reusable React components
+├── constants/           # Application contants
+├── lib/                 # Database and configuration
+├── models/              # MongoDB data models
+├── pages/               # Next.js pages and API routes
+├── public/              # Static files
+├── src/                 # Utility functions and helpers
+├── .env.local.example   # Environment variables template
+├── next.config.js       # Next.js configuration
+├── package.json         # Project dependencies and scripts
+└── yarn.lock            # Dependency lock file
+```
 
 ## Getting Started
 
@@ -96,17 +122,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 - `npm run build` - Build the application for production
 - `npm start` - Start the production server
 - `npm run lint` - Run ESLint to check code quality
-
-## Project Structure
-
-```
-├── pages/              # Next.js pages and API routes
-├── components/         # Reusable React components
-├── public/            # Static files
-├── styles/            # Global styles and Emotion styled components
-├── lib/               # Utility functions and helpers
-└── package.json       # Project dependencies
-```
 
 ## Key Technologies
 
