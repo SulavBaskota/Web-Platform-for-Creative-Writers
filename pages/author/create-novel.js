@@ -45,9 +45,12 @@ export default function CreateNovel() {
 
     const imgData = new FormData();
     imgData.append("file", selectedImage);
-    imgData.append("upload_preset", "book-cover-pics");
+    imgData.append(
+      "upload_preset",
+      process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET,
+    );
     const cloudinaryResponse = await uploadImage(imgData).then((res) =>
-      res.json()
+      res.json(),
     );
 
     const requestData = {
@@ -59,7 +62,7 @@ export default function CreateNovel() {
     };
     const res = await fetch(
       "/api/author/create-novel",
-      getRequestOptions(requestData, "POST")
+      getRequestOptions(requestData, "POST"),
     ).then((res) => res.json());
     if (!res.success) {
       if (res.error === "title not available") {

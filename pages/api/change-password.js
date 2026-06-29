@@ -19,16 +19,16 @@ export default async function handler(req, res) {
 
         const transporter = nodemailer.createTransport({
           port: 465,
-          host: "smtp.gmail.com",
+          host: process.env.NODEMAILER_HOST,
           auth: {
-            user: "readhub99",
-            pass: process.env.GMAIL_PASS,
+            user: process.env.NODEMAILER_USER,
+            pass: process.env.NODEMAILER_PASSWORD,
           },
           secure: true,
         });
 
         const mailData = {
-          from: "readhub99@gmail.com",
+          from: process.env.NODEMAILER_EMAIL,
           to: email,
           subject: "Account Password Changed",
           text: message,

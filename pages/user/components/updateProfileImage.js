@@ -22,10 +22,13 @@ const UpdateProfileImageForm = ({ userInfo, setUserInfo }) => {
     setLoading(true);
     const imgData = new FormData();
     imgData.append("file", selectedImage);
-    imgData.append("upload_preset", "profile-pics");
+    imgData.append(
+      "upload_preset",
+      process.env.NEXT_PUBLIC_CLOUDINARY_PROFILE_PRESET,
+    );
 
     const cloudinaryResponse = await uploadImage(imgData).then((res) =>
-      res.json()
+      res.json(),
     );
 
     const requestData = {
@@ -35,7 +38,7 @@ const UpdateProfileImageForm = ({ userInfo, setUserInfo }) => {
 
     const res = await fetch(
       "/api/user/udpate-account/update-profile-image",
-      getRequestOptions(requestData, "PUT")
+      getRequestOptions(requestData, "PUT"),
     ).then((res) => res.json());
     setLoading(false);
     if (res.success) {

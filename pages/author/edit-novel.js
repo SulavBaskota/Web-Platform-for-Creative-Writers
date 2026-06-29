@@ -79,16 +79,19 @@ export default function EditNovel({ novelInfo }) {
     if (selectedImage) {
       const imgData = new FormData();
       imgData.append("file", selectedImage);
-      imgData.append("upload_preset", "book-cover-pics");
+      imgData.append(
+        "upload_preset",
+        process.env.NEXT_PUBLIC_CLOUDINARY_BOOK_PRESET,
+      );
       const cloudinaryResponse = await uploadImage(imgData).then((res) =>
-        res.json()
+        res.json(),
       );
 
       requestData.img = cloudinaryResponse.secure_url;
     }
     const res = await fetch(
       "/api/author/edit-novel",
-      getRequestOptions(requestData, "PUT")
+      getRequestOptions(requestData, "PUT"),
     ).then((res) => res.json());
     if (!res.success) {
       router.push("/400");

@@ -12,7 +12,7 @@ export default NextAuth({
         await dbConnect();
 
         const { username, password } = credentials;
-        const user = await await User.findOne(
+        const user = await User.findOne(
           { username },
           "username password userrole"
         );
